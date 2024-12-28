@@ -10,7 +10,7 @@ async function openMeet(driver) {
     const nameInput = await driver.wait(until.elementLocated(By.xpath('//input[@placeholder="Your name"]')), 10000);
     await nameInput.clear();
     await nameInput.click();
-    await nameInput.sendKeys('value', "Meeting bot");
+    await nameInput.sendKeys("Meeting bot");
     await driver.sleep(1000)
     const mic = await driver.wait(until.elementLocated({ className: 'GKGgdd' }), 10000);
     await mic.click();
